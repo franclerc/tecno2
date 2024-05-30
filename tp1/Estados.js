@@ -106,7 +106,7 @@ class Estados {
   dibujar() {
     this.tiempo++;
     this.dibujartamanio();
-    if (this.tiempo >= 40 && !this.frenoActivado) {
+    if (this.tiempo >= 100 && !this.frenoActivado) {
       this.estado = (this.estado + 1) % this.tamanio.length;
       this.tiempo = 0;
     }
