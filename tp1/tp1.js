@@ -18,10 +18,9 @@ function keyPressed() {
     prototipo.frenar();
   }else if (key == 'a') {
     prototipo.cambiarCoordenadas();
+  }else if (key == 'r') { // Tecla para reiniciar
+    prototipo.reiniciar();
   }
 }
 
 
-function mousePressed() {
-  prototipo.agregarMancha();
-}
