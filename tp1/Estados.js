@@ -234,7 +234,8 @@ class Estados {
       }
     }
   }
-   reiniciar(){
+  
+  reiniciar(){
      this.frenoActivado = false;
      this.estado=0;
      this.tiempo = 0;
