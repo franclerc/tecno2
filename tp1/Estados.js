@@ -2,79 +2,79 @@ class Estados {
   constructor() {
     this.filas = 0;
     this.columnas = 0;
-    this.tamCelda = 80;
+    this.tamCelda = 75;
 
     this.dimensiones = [
       { // Canvas 1: 400x400
-        inicioX:35,
+        inicioX:30,
         finalX: 500,
-        inicioY: 20,
+        inicioY: 25,
         finalY:500
       },
        { // Canvas 1: 400x400
-        inicioX:35,
+        inicioX:30,
         finalX: 500,
-        inicioY: 20,
+        inicioY: 25,
         finalY:500
       },
        { // Canvas 1: 400x400
-        inicioX:35,
+        inicioX:30,
         finalX: 500,
-        inicioY: 20,
+        inicioY: 25,
         finalY:500
       },
        { // Canvas 1: 400x400
-        inicioX:35,
+        inicioX:30,
         finalX: 500,
-        inicioY: 20,
+        inicioY: 25,
         finalY:500
       },
       { // Canvas 2: 250x600
-        inicioX: 40,
+        inicioX: 25,
         finalX: 370,
-        inicioY: 60,
+        inicioY: 12,
         finalY: 680
       },
        { // Canvas 2: 250x600
-        inicioX: 40,
+        inicioX: 25,
         finalX: 370,
-        inicioY: 60,
+        inicioY: 12,
         finalY: 680
       },
       { // Canvas 2: 250x600
-        inicioX: 40,
+         inicioX: 25,
         finalX: 370,
-        inicioY: 60,
+        inicioY: 12,
         finalY: 680
       },
       { // Canvas 2: 250x600
-        inicioX: 40,
+         inicioX: 25,
         finalX: 370,
-        inicioY: 60,
+        inicioY: 12,
         finalY: 680
       },
       { // Canvas 3: 300x500
-        inicioX: 70,
+        inicioX: 15,
         finalX: 330,
-        inicioY: 50,
+        inicioY: 35,
         finalY: 530
       },
       { // Canvas 3: 300x500
-        inicioX: 70,
+        inicioX: 15,
         finalX: 330,
-        inicioY: 50,
+        inicioY: 35,
         finalY: 530
       },
       { // Canvas 3: 300x500
-        inicioX: 70,
+         inicioX: 15,
         finalX: 330,
-        inicioY: 50,
+        inicioY: 35,
         finalY: 530
       },
       { // Canvas 3: 300x500
-        inicioX: 70,
+        inicioX: 15,
         finalX: 330,
-        inicioY: 50,
+        inicioY: 35,
         finalY: 530
       },
       { // Canvas 4: 600x600
