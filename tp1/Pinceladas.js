@@ -1,7 +1,7 @@
 class Pintura {
   constructor() {
     this.imagenes = [
-      'data/01.png',      
+      'data/01.png',
       'data/02.png',
       'data/03.png',
       'data/04.png',
@@ -9,9 +9,9 @@ class Pintura {
       'data/06.png',
       'data/07.png',
       'data/08.png',
-      'data/09.png',      
+      'data/09.png',
       'data/10.png',
-      'data/11.png',
+      'data/01.png',
       'data/12.png',
       'data/13.png',
       'data/14.png',
@@ -23,15 +23,15 @@ class Pintura {
       'data/20.png',
       'data/21.png',
       'data/22.png',
-       'data/01.png',      
+      'data/01.png',
       'data/02.png',
       'data/03.png',
       'data/04.png',
       'data/05.png',
       'data/06.png',
-      'data/07.png',
       'data/08.png',
-       'data/12.png',
+      'data/08.png',
+      'data/12.png',
       'data/13.png',
       'data/14.png',
       'data/15.png',
@@ -41,9 +41,9 @@ class Pintura {
       'data/19.png',
       'data/20.png',
       'data/21.png',
-        'data/21.png',
+      'data/21.png',
       'data/22.png',
-       'data/01.png',      
+      'data/01.png',
       'data/02.png',
       'data/03.png',
       'data/04.png',
@@ -51,7 +51,6 @@ class Pintura {
       'data/06.png',
       'data/07.png'
     ];
-   
   }
 
   cargarImagenes() {
