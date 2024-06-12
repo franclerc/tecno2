@@ -1,15 +1,16 @@
 class Pintura {
   constructor() {
     this.imagenes = [
-      'data/manchasamarillas.png',
-      'data/manchasvioletas.png',
-      'data/manchasverdes.png',
-      'data/manchasrojas.png',
-      'data/manchasrosas.png',
-      'data/manchasnegras.png',
-      'data/manchasblancas.png',
-      'data/manchasazules.png'
+      'data/combinacion1.png',
+      'data/combinacion2.png',
+      'data/combinacion3.png',
+      'data/combinacion4.png',
+      'data/combinacion5.png',
+      'data/combinacion6.png',
+      'data/combinacion7.png',
+      'data/combinacion8.png'
     ];
+   
   }
 
   cargarImagenes() {

@@ -1,35 +1,137 @@
 class Estados {
   constructor() {
+    this.filas = 0;
+    this.columnas = 0;
+    this.tamCelda = 80;
+
+    this.dimensiones = [
+      { // Canvas 1: 400x400
+        inicioX:35,
+        finalX: 500,
+        inicioY: 35,
+        finalY:500
+      },
+       { // Canvas 1: 400x400
+        inicioX:35,
+        finalX: 500,
+        inicioY: 35,
+        finalY:500
+      },
+       { // Canvas 1: 400x400
+        inicioX:35,
+        finalX: 500,
+        inicioY: 35,
+        finalY:500
+      },
+       { // Canvas 1: 400x400
+        inicioX:35,
+        finalX: 500,
+        inicioY: 35,
+        finalY:500
+      },
+      { // Canvas 2: 250x600
+        inicioX: 40,
+        finalX: 370,
+        inicioY: 60,
+        finalY: 680
+      },
+       { // Canvas 2: 250x600
+        inicioX: 40,
+        finalX: 370,
+        inicioY: 60,
+        finalY: 680
+      },
+      { // Canvas 2: 250x600
+        inicioX: 40,
+        finalX: 370,
+        inicioY: 60,
+        finalY: 680
+      },
+      { // Canvas 2: 250x600
+        inicioX: 40,
+        finalX: 370,
+        inicioY: 60,
+        finalY: 680
+      },
+      { // Canvas 3: 300x500
+        inicioX: 70,
+        finalX: 330,
+        inicioY: 50,
+        finalY: 530
+      },
+      { // Canvas 3: 300x500
+        inicioX: 70,
+        finalX: 330,
+        inicioY: 50,
+        finalY: 530
+      },
+      { // Canvas 3: 300x500
+        inicioX: 70,
+        finalX: 330,
+        inicioY: 50,
+        finalY: 530
+      },
+      { // Canvas 3: 300x500
+        inicioX: 70,
+        finalX: 330,
+        inicioY: 50,
+        finalY: 530
+      },
+      { // Canvas 4: 600x600
+        inicioX: 50,
+        finalX: 640,
+        inicioY: 50,
+        finalY: 640
+      },
+      { // Canvas 4: 600x600
+        inicioX: 50,
+        finalX: 640,
+        inicioY: 50,
+        finalY: 640
+      },
+       { // Canvas 4: 600x600
+        inicioX: 50,
+        finalX: 640,
+        inicioY: 50,
+        finalY: 640
+      },
+       { // Canvas 4: 600x600
+        inicioX: 50,
+        finalX: 640,
+        inicioY: 50,
+        finalY: 640
+      }
+    ];
+
     this.tiempo = 0;
     this.estado = 0;
     this.frenoActivado = false;
     this.indiceMancha = 0;
     this.manchaCoordenadas = [];
 
-    this.tamanio = [  // tam de los canvas
+    this.tamanio = [ // tam de los canvas
       { ancho: 400, alto: 400 },
       { ancho: 400, alto: 400 },
       { ancho: 400, alto: 400 },
       { ancho: 400, alto: 400 },
       
-        { ancho: 250, alto: 600 },
       { ancho: 250, alto: 600 },
       { ancho: 250, alto: 600 },
-      { ancho: 250, alto: 600 },
+      {  ancho: 250, alto: 600 },
+      {  ancho: 250, alto: 600 },
       
-        { ancho: 300, alto: 500 },
+       { ancho: 300, alto: 500},
+      { ancho: 300, alto: 500},
       { ancho: 300, alto: 500 },
-      { ancho: 300, alto: 500 },
-      { ancho: 300, alto: 500 },
+      { ancho: 300, alto: 500},
       
-        { ancho: 600, alto: 600 },
+       { ancho: 600, alto: 600 },
+      { ancho: 600, alto: 600},
       { ancho: 600, alto: 600 },
-      { ancho: 600, alto: 600 },
-      { ancho: 600, alto: 600 },
+      { ancho: 600, alto: 600 }
     ];
-    
 
-    this.colores = [  // fondos
+    this.colores = [ // fondos
       'data/Amarillo1.png',
       'data/Rojo1.png',
       'data/Rosa1.png',
@@ -48,53 +150,11 @@ class Estados {
       'data/Verde4.png'
     ];
 
-    // Coordenadas específicas para cada tamaño de canvas
-    this.coordenadasPorTamanio = {
-      "400x400": [
-        { x: 30, y: 10 },  // Mancha 1
-        { x: 40, y: 80 },  // Mancha 2
-        { x: 100, y: 30 }, // Mancha 3
-        { x: 200, y: 70 },   // Mancha 4
-        { x: 20, y: 20 }, // Mancha 5
-        { x: 40, y: 10 }, // Mancha 6
-        { x: 100, y: 20 }, // Mancha 7
-        { x: 100, y: 0 }  // Mancha 8
-      ],
-      "250x600": [
-        { x: 50, y: 10 },
-        { x: 70, y: 20 },
-        { x: 100, y: 30 },
-        { x: 50, y: 40 },
-        { x: 20, y: 50 },
-        { x: 22, y: 150 },
-        { x: 50, y: -50 },
-        { x: 10, y: -100 }
-      ],
-      "300x500": [
-        { x: -40, y: 75 },
-        { x: -150, y: 100 },
-        { x: 15, y: 40 },
-        { x: 50, y: 10 },
-        { x: 10, y: 30 },
-        { x: -80, y: 30 },
-        { x: 60, y: 20},
-        { x: -50, y: -100 }
-      ],
-      "600x600": [
-        { x: -40, y: 10 },  
-        { x: 240, y: 160 },  
-        { x: 130, y: 140 },   
-        { x: 100, y: 100 }, 
-        { x: 200, y: 200 }, 
-        { x: 70  , y: -40 }, 
-        { x: 20, y: 0 },   
-        { x: 150, y: -180 }    
-      ]
-    };
-
     this.pintura = new Pintura();
     this.cargarImagenes();
     this.pintura.cargarImagenes();
+
+    this.crearGrilla();
   }
 
   cargarImagenes() {
@@ -115,44 +175,61 @@ class Estados {
       image(this.colores[this.estado], 0, 0, this.tamanio[this.estado].ancho, this.tamanio[this.estado].alto);
     }
 
+    // Dibuja las manchas en las coordenadas de la grilla
     for (let i = 0; i < this.manchaCoordenadas.length; i++) {
       let mancha = this.manchaCoordenadas[i];
-      image(mancha.imagen, mancha.x, mancha.y);
+      image(mancha.imagen, mancha.x, mancha.y); // Coordenadas basadas en la grilla
+    }
+
+    // Dibuja la grilla con elipses
+    for (let i = 0; i < this.columnas; i++) {
+      for (let j = 0; j < this.filas; j++) {
+        ellipse(this.grilla[i][j].x, this.grilla[i][j].y, 5, 5);
+        
+      }
     }
   }
-  
+
+   crearGrilla() { // cantidad de columnas y filas
+    const canvasActual = this.dimensiones[this.estado];
+    this.columnas = int((canvasActual.finalX - canvasActual.inicioX) / this.tamCelda);
+    this.filas = int((canvasActual.finalY - canvasActual.inicioY) / this.tamCelda);
+
+    this.grilla = []; // Array para almacenar las coordenadas de cada celda
+
+    // Llenar la grilla con las coordenadas de cada celda
+    for (let i = 0; i < this.columnas; i++) {
+      this.grilla[i] = [];
+      for (let j = 0; j < this.filas; j++) {
+        this.grilla[i][j] = { x: canvasActual.inicioX + i * this.tamCelda, y: canvasActual.inicioY + j * this.tamCelda };
+      }
+    }
+  }
 
   dibujartamanio() {
     resizeCanvas(this.tamanio[this.estado].ancho, this.tamanio[this.estado].alto);
+    this.crearGrilla();
   }
-  
 
-  frenar() { // detener el tiempo en un canva determinado
+  frenar() { // detener el tiempo en un canvas determinado
     this.frenoActivado = true;
     this.tiempo = 0;
   }
 
-  agregarMancha() {  
+  agregarMancha() {
     if (this.frenoActivado && this.indiceMancha < this.pintura.imagenes.length) {
       let imagenAleatoria = this.pintura.imagenes[this.indiceMancha];
-      let key = `${this.tamanio[this.estado].ancho}x${this.tamanio[this.estado].alto}`;
-      let coords = this.coordenadasPorTamanio[key][this.indiceMancha % this.coordenadasPorTamanio[key].length];
-
-      this.manchaCoordenadas.push({ imagen: imagenAleatoria, x: coords.x, y: coords.y });
+      // Añade la mancha en una posición aleatoria dentro de la grilla
+      this.manchaCoordenadas.push({ imagen: imagenAleatoria, x: int(random(this.columnas)), y: int(random(this.filas)) });
       this.indiceMancha++;
     }
   }
 
-  cambiarCoordenadas() { // cambiar las coordenadas de las manchas con letra a
-    let key = `${this.tamanio[this.estado].ancho}x${this.tamanio[this.estado].alto}`;
-    let coords = this.coordenadasPorTamanio[key];
-    let nuevaCoordenada = coords.shift(); // Extrae la primera coordenada del array
-    coords.push(nuevaCoordenada); // Añade la primera coordenada al final del array
-
-    // Actualiza las coordenadas de las manchas con las nuevas coordenadas
+  cambiarCoordenadas() {
+    // Actualiza las coordenadas de las manchas con nuevas coordenadas dentro de la grilla
     this.manchaCoordenadas.forEach((mancha, index) => {
-      mancha.x = coords[index].x;
-      mancha.y = coords[index].y;
+      mancha.x = int(random(this.columnas));
+      mancha.y = int(random(this.filas));
     });
   }
 }
