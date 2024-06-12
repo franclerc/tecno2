@@ -1,4 +1,5 @@
-let soundModelURL = 'https://teachablemachine.withgoogle.com/models/fx2N0VMQ3/';
+let classifier;
+let soundModelURL = 'https://teachablemachine.withgoogle.com/models/j6q0vREkM/';
 let mic;
 let prototipo;
 
@@ -45,18 +46,3 @@ function gotResult(error, results) {
     prototipo.reiniciar();
   }
 }
-
-
-//function keyPressed() {
-//  if (key == 'p') {
-//    prototipo.frenar();
-//  }else if (key == 'a') {
-//    prototipo.cambiarCoordenadas();
-//  }else if (key == 'r') { // Tecla para reiniciar
-//    prototipo.reiniciar();
-//  }
-//}
-
-
-
-
