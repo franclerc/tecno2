@@ -1,7 +1,7 @@
 class Pintura {
   constructor() {
     this.imagenes = [
-      'data/combinacion1.png',
+      'data/combinacion1.png',      
       'data/combinacion2.png',
       'data/combinacion3.png',
       'data/combinacion4.png',

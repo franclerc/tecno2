@@ -8,25 +8,25 @@ class Estados {
       { // Canvas 1: 400x400
         inicioX:35,
         finalX: 500,
-        inicioY: 35,
+        inicioY: 20,
         finalY:500
       },
        { // Canvas 1: 400x400
         inicioX:35,
         finalX: 500,
-        inicioY: 35,
+        inicioY: 20,
         finalY:500
       },
        { // Canvas 1: 400x400
         inicioX:35,
         finalX: 500,
-        inicioY: 35,
+        inicioY: 20,
         finalY:500
       },
        { // Canvas 1: 400x400
         inicioX:35,
         finalX: 500,
-        inicioY: 35,
+        inicioY: 20,
         finalY:500
       },
       { // Canvas 2: 250x600
@@ -176,18 +176,20 @@ class Estados {
     }
 
     // Dibuja las manchas en las coordenadas de la grilla
-    for (let i = 0; i < this.manchaCoordenadas.length; i++) {
-      let mancha = this.manchaCoordenadas[i];
-      image(mancha.imagen, mancha.x, mancha.y); // Coordenadas basadas en la grilla
-    }
+    //for (let i = 0; i < this.manchaCoordenadas.length; i++) {
+    //  let mancha = this.manchaCoordenadas[i];
+    //  image(mancha.imagen, mancha.x, mancha.y); // Coordenadas basadas en la grilla
+    //}
 
-    // Dibuja la grilla con elipses
-    for (let i = 0; i < this.columnas; i++) {
-      for (let j = 0; j < this.filas; j++) {
-        ellipse(this.grilla[i][j].x, this.grilla[i][j].y, 5, 5);
-        
-      }
+  for (let i = 0; i < this.columnas; i++) {
+  for (let j = 0; j < this.filas; j++) {
+    let indiceImagen = i * this.filas + j;
+    if (indiceImagen < this.pintura.imagenes.length) {
+      let imagen = this.pintura.imagenes[indiceImagen];
+      image(imagen, this.grilla[i][j].x, this.grilla[i][j].y, 50, 50); // Tamaño arbitrario de la imagen
     }
+  }
+}
   }
 
    crearGrilla() { // cantidad de columnas y filas
@@ -216,20 +218,24 @@ class Estados {
     this.tiempo = 0;
   }
 
-  agregarMancha() {
-    if (this.frenoActivado && this.indiceMancha < this.pintura.imagenes.length) {
-      let imagenAleatoria = this.pintura.imagenes[this.indiceMancha];
-      // Añade la mancha en una posición aleatoria dentro de la grilla
-      this.manchaCoordenadas.push({ imagen: imagenAleatoria, x: int(random(this.columnas)), y: int(random(this.filas)) });
-      this.indiceMancha++;
-    }
-  }
+// Modificar la función agregarMancha para asignar una imagen específica a cada mancha
+//agregarMancha() {
+//  if (this.frenoActivado && !this.manchasAgregadas && this.indiceMancha < this.pintura.imagenes.length) {
+//    let imagen = this.pintura.imagenes[this.indiceMancha];
+//    let x = this.indiceMancha % this.columnas; // Calcular la columna basada en el índice de la mancha
+//    let y = floor(this.indiceMancha / this.columnas); // Calcular la fila basada en el índice de la mancha
+//    // Añade la mancha con la imagen específica en las coordenadas calculadas
+//    this.manchaCoordenadas.push({ imagen: imagen, x: x * this.tamCelda, y: y * this.tamCelda });
+//    this.indiceMancha++;
+//    this.manchasAgregadas = true; // Marcar que las manchas han sido agregadas
+//  }
+//}
 
-  cambiarCoordenadas() {
-    // Actualiza las coordenadas de las manchas con nuevas coordenadas dentro de la grilla
-    this.manchaCoordenadas.forEach((mancha, index) => {
-      mancha.x = int(random(this.columnas));
-      mancha.y = int(random(this.filas));
-    });
-  }
+  //cambiarCoordenadas() {
+  //  // Actualiza las coordenadas de las manchas con nuevas coordenadas dentro de la grilla
+  //  this.manchaCoordenadas.forEach((mancha, index) => {
+  //    mancha.x = int(random(this.columnas));
+  //    mancha.y = int(random(this.filas));
+  //  });
+  //}
 }
