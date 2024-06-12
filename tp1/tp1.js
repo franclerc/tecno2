@@ -1,6 +1,5 @@
-// const model_url: 'https://teachablemachine.withgoogle.com/models/j6q0vREkM/';
 let classifier;
-let soundModelURL = 'https://teachablemachine.withgoogle.com/models/j6q0vREkM/';
+let soundModelURL = 'https://teachablemachine.withgoogle.com/models/fx2N0VMQ3/';
 let mic;
 let prototipo;
 
