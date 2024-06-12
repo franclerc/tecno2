@@ -1,4 +1,4 @@
-let soundModelURL = 'https://teachablemachine.withgoogle.com/models/j6q0vREkM/';
+let soundModelURL = 'https://teachablemachine.withgoogle.com/models/fx2N0VMQ3/';
 let mic;
 let prototipo;
 
