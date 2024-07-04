@@ -291,5 +291,6 @@ ajustarTamanoYCambiarCoordenadas() {
      this.frenoActivado = false;
      this.estado=0;
      this.tiempo = 0;
+     this.factorTam = 50;
   }
 }
